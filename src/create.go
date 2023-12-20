@@ -17,7 +17,7 @@ func Createagencies(name, region, address, phone, employeeCount string) {
 
 	currentTime := time.Now()
 	newAgency := model.Agency{
-		ID:            len(data),
+		ID:            len(data) + 1,
 		Name:          name,
 		Region:        region,
 		Address:       address,
