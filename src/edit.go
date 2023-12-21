@@ -11,6 +11,7 @@ func EditAgency(agencyID int) {
 	data, err := db.LoadData()
 	if err != nil {
 		fmt.Println("Error loading data: ", err)
+
 		return
 	}
 

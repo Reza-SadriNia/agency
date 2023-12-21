@@ -12,6 +12,7 @@ func CreateAgencies(name, region, address, phone, employeeCount string) {
 	data, err := db.LoadData()
 	if err != nil {
 		fmt.Println("Error loading data:", err)
+
 		return
 	}
 
@@ -31,6 +32,7 @@ func CreateAgencies(name, region, address, phone, employeeCount string) {
 
 	if err != nil {
 		fmt.Println("error saving data:", err)
+
 		return
 	}
 	fmt.Println(strings.Repeat("-", 40))

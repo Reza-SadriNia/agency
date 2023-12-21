@@ -22,6 +22,7 @@ func main() {
 
 		switch command {
 		case "exit":
+
 			return
 
 		case "list":

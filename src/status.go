@@ -12,6 +12,7 @@ func Status(region string) {
 	data, err := db.LoadData()
 	if err != nil {
 		fmt.Println("Error loading data: ", err)
+
 		return
 	}
 
