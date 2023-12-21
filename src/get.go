@@ -19,6 +19,7 @@ func GetAgencyDetail(agencyID int) {
 	for _, item := range data {
 		if item.ID == agencyID {
 			foundAgency = item
+			break
 		}
 	}
 
