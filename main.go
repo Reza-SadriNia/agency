@@ -45,6 +45,9 @@ func main() {
 			src.CreateAgencies(name, region, address, phone, employeeCount)
 		case "edit":
 		case "status":
+			fmt.Print("Enter region: ")
+			region := src.GetUserInput()
+			src.Status(region)
 		default:
 			fmt.Println(strings.Repeat("-", 30))
 			fmt.Print(strings.Repeat("\n", 1))
