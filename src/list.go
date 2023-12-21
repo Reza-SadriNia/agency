@@ -16,7 +16,7 @@ func ListAgencies(region string) {
 		if item.Region == region {
 			fmt.Println(strings.Repeat("-", 40))
 			fmt.Println(strings.Repeat("\n", 1))
-			fmt.Printf("ID: %d Name: %s Address: %s", item.ID, item.Name, item.Address)
+			fmt.Printf("ID: %d, Name: %s, Address: %s", item.ID, item.Name, item.Address)
 			fmt.Println(strings.Repeat("\n", 1))
 			fmt.Println(strings.Repeat("-", 40))
 		}

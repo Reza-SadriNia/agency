@@ -3,6 +3,7 @@ package main
 import (
 	"agency/src"
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -27,6 +28,9 @@ func main() {
 			region := src.GetUserInput()
 			src.ListAgencies(region)
 		case "get":
+			fmt.Print("Enter Agency ID: ")
+			agencyID, _ := strconv.Atoi(src.GetUserInput())
+			src.GetAgencyDetail(agencyID)
 		case "create":
 			fmt.Print("Enter agency name: ")
 			name := src.GetUserInput()
