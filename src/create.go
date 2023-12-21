@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func Createagencies(name, region, address, phone, employeeCount string) {
+func CreateAgencies(name, region, address, phone, employeeCount string) {
 	data, err := db.LoadData()
 	if err != nil {
 		fmt.Println("Error loading data:", err)

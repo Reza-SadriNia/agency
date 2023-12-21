@@ -27,7 +27,6 @@ func main() {
 			region := src.GetUserInput()
 			src.ListAgencies(region)
 		case "get":
-		case "create":
 			fmt.Print("Enter agency name: ")
 			name := src.GetUserInput()
 			fmt.Print("Enter region: ")
@@ -38,7 +37,7 @@ func main() {
 			phone := src.GetUserInput()
 			fmt.Print("Enter employeeCount: ")
 			employeeCount := src.GetUserInput()
-			src.Createagencies(name, region, address, phone, employeeCount)
+			src.CreateAgencies(name, region, address, phone, employeeCount)
 		case "edit":
 		case "status":
 		default:
