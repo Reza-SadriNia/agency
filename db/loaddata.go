@@ -3,7 +3,6 @@ package db
 import (
 	"agency/model"
 	"bufio"
-	"fmt"
 	"os"
 	"strconv"
 	"strings"
@@ -21,7 +20,6 @@ func LoadData() ([]model.Agency, error) {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
-		fmt.Println(line)
 		fields := strings.Split(line, ",")
 		id, _ := strconv.Atoi(fields[0])
 		data = append(data, model.Agency{
