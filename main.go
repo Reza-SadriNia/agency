@@ -23,14 +23,17 @@ func main() {
 		switch command {
 		case "exit":
 			return
+
 		case "list":
 			fmt.Print("Enter region: ")
 			region := src.GetUserInput()
 			src.ListAgencies(region)
+
 		case "get":
 			fmt.Print("Enter Agency ID: ")
 			agencyID, _ := strconv.Atoi(src.GetUserInput())
 			src.GetAgencyDetail(agencyID)
+
 		case "create":
 			fmt.Print("Enter agency name: ")
 			name := src.GetUserInput()
@@ -43,11 +46,17 @@ func main() {
 			fmt.Print("Enter employeeCount: ")
 			employeeCount := src.GetUserInput()
 			src.CreateAgencies(name, region, address, phone, employeeCount)
+
 		case "edit":
+			fmt.Print("Enter agency ID to Edit:")
+			agencyID, _ := strconv.Atoi(src.GetUserInput())
+			src.EditAgency(agencyID)
+
 		case "status":
 			fmt.Print("Enter region: ")
 			region := src.GetUserInput()
 			src.Status(region)
+
 		default:
 			fmt.Println(strings.Repeat("-", 30))
 			fmt.Print(strings.Repeat("\n", 1))
