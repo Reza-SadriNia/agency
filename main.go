@@ -23,6 +23,9 @@ func main() {
 		case "exit":
 			return
 		case "list":
+			fmt.Print("Enter region: ")
+			region := src.GetUserInput()
+			src.ListAgencies(region)
 		case "get":
 		case "create":
 			fmt.Print("Enter agency name: ")
